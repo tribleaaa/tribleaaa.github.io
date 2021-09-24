@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML5 Layout Sample</title>
+<meta charset="utf-8">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Define the style of header */
+header {
+  background-color: #DAF7A6 ;
+  padding: 40px;
+  text-align: center;
+  font-size: 35px;
+  color: #09D6C2;
+}
+
+/* Create two columns that floats next to each other */
+/* i.e. 30% vs 70% */
+nav {
+  float: left;
+  width: 20%;
+  height: 300px; /* fix height for sample */
+  background: #09D664;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* This is another column */
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+  background-color: #E070FE;
+  height: 300px; /* fix height for sample */
+}
+
+/* This is another column */
+article2 {
+  float: left;
+  padding: 20px;
+  width: 20%;
+  background-color: #09D664;
+  height: 300px; /* fix height for sample */
+  }
+  
+  
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Define the style of footer */
+footer {
+  background-color: #fafac6;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+/* Responsive layout - makes the two columnsstack on top of each other instead of side by side when viewing on mobile */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* min-width example*/
+@media (min-width: 500px) {
+  header, footer {
+    background-color: blue;
+	color: white;
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>Online store</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Toys</a></li>
+      <li><a href="#">Accessories</a></li>
+
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Discription</h1>
+    <p>A wonderful online store for selling toys.</p>
+    <p>Pick and enjoy. </p>
+  </article>
+  
+  <nav>
+    <ul>
+
+      <li><a href="#">Payment method</a></li>
+	  <li><a href="#">About us</a></li>
+    </ul>
+  </nav>
+  
+</section>
+
+<footer>
+  <p>ABC Company</p>
+</footer>
+
+</body>
+</html>
+
